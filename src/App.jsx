@@ -202,12 +202,12 @@ export default function Portfolio() {
     animateToolbox();
   }, [toolboxControls]);
 
-  const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "sau.pdf";
-    link.download = "Saugat_Neupane_CV.pdf";
-    link.click();
-  };
+  // const handleDownloadCV = () => {
+  //   const link = document.createElement("a");
+  //   link.href = "sau.pdf";
+  //   link.download = "Saugat_Neupane_CV.pdf";
+  //   link.click();
+  // };
 
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
@@ -284,7 +284,7 @@ export default function Portfolio() {
               />
               <motion.img
                 src="saugat.jpeg"
-                alt="Godatwa Parsad"
+                alt="saugat"
                 className="rounded-full w-full h-full object-cover border-4 border-white"
                 animate={{
                   scale: [1, 1.1, 1],
@@ -340,7 +340,7 @@ export default function Portfolio() {
                   </motion.a>
                 ))}
               </div>
-              <AnimatedDownloadButton onClick={handleDownloadCV} />
+              <AnimatedDownloadButton />
             </motion.div>
           </div>
         </motion.section>
