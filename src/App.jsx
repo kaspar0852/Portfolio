@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import { SiTypescript, SiAngular, SiDotnet, SiCsharp } from "react-icons/si";
 import AcademicJourney from "./Academic-Journey";
+import { a } from "framer-motion/client";
 
 const projects = [
   {
@@ -145,40 +146,40 @@ const AnimatedDownloadButton = () => {
   }, [buttonControls]);
 
   return (
-    <motion.button
-      className="relative bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg overflow-hidden group"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      animate={buttonControls}
-      onHoverStart={() => {
-        iconControls.start({
-          x: [0, 5, 0],
-          transition: { duration: 0.3, repeat: Infinity },
-        });
-      }}
-      onHoverEnd={() => {
-        iconControls.stop();
-      }}
-    >
-      <motion.span className="absolute inset-0 bg-gradient-to-r from-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <motion.span className="relative flex items-center justify-center space-x-2">
-        <a href="sau.pdf" download="saugat-neupane-resume.pdf">
-          Download CV
-        </a>
-        <motion.span animate={iconControls}>
-          <FaFileDownload className="text-xl" />
-        </motion.span>
-      </motion.span>
-      <motion.span
-        className="absolute inset-0 border-2 border-white rounded-full"
-        initial={{ scale: 0, opacity: 0.5 }}
-        animate={{
-          scale: 1.5,
-          opacity: 0,
-          transition: { duration: 1, repeat: Infinity },
+    <a href="sau.pdf" download="saugat-neupane-resume.pdf">
+      <motion.button
+        className="relative bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg overflow-hidden group"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        animate={buttonControls}
+        onHoverStart={() => {
+          iconControls.start({
+            x: [0, 5, 0],
+            transition: { duration: 0.3, repeat: Infinity },
+          });
         }}
-      />
-    </motion.button>
+        onHoverEnd={() => {
+          iconControls.stop();
+        }}
+      >
+        <motion.span className="absolute inset-0 bg-gradient-to-r from-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <motion.span className="relative flex items-center justify-center space-x-2">
+          <span>Download CV</span>
+          <motion.span animate={iconControls}>
+            <FaFileDownload className="text-xl" />
+          </motion.span>
+        </motion.span>
+        <motion.span
+          className="absolute inset-0 border-2 border-white rounded-full"
+          initial={{ scale: 0, opacity: 0.5 }}
+          animate={{
+            scale: 1.5,
+            opacity: 0,
+            transition: { duration: 1, repeat: Infinity },
+          }}
+        />
+      </motion.button>
+    </a>
   );
 };
 
