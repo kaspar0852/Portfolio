@@ -91,13 +91,6 @@ const experiences = [
     description:
       "Assisted in the development of key web applications, including a real-time intranet application and an automated booking system. Worked on optimizing API designs, enhancing query performance, and integrating Microsoft Graph API for automated workflows. Contributed to the creation of database architectures to support high-performance applications.",
   },
-  {
-    title: "Finance Manager",
-    company: "foodisgooood_",
-    period: "2023",
-    description:
-      "Collaborated with cafes and vendors to grow the foodisgoood_ page and increase market reach. Assisted in the development of key web applications, including a real-time intranet application and an automated booking system. Worked on optimizing API designs, enhancing query performance, and integrating Microsoft Graph API for automated workflows. Contributed to creating database architectures to support high-performance applications.",
-  },
 ];
 
 const achievements = [
@@ -503,7 +496,7 @@ export default function Portfolio() {
         <footer className="py-8 bg-gray-800 bg-opacity-50">
           <div className="container mx-auto px-4 text-center">
             <p className="text-gray-400">
-              © 2023 Godatwa Parsad. All rights reserved.
+              © 2024 Saugat Neupane. All rights reserved.
             </p>
             <div className="mt-4 flex justify-center space-x-4">
               {socialLinks.map((link, index) => (
